@@ -1,22 +1,45 @@
 // src/app/events/page.tsx
 
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
+import EventCard from '@/components/EventCard';
 
 // Mock data - replace with actual data from your CMS or database
 const upcomingEvents = [
-  { id: 1, date: "2024-09-15", venue: "Madison Square Garden", city: "New York, NY", ticketLink: "https://ticketmaster.com/event1" },
-  { id: 2, date: "2024-09-22", venue: "The Hollywood Bowl", city: "Los Angeles, CA", ticketLink: "https://ticketmaster.com/event2" },
-  { id: 3, date: "2024-10-05", venue: "Red Rocks Amphitheatre", city: "Morrison, CO", ticketLink: "https://ticketmaster.com/event3" },
-  // Add more upcoming events as needed
+  { 
+    id: 1, 
+    title: "Summer Solstice Festival",
+    date: "2024-09-15", 
+    time: "20:00",
+    venue: "Madison Square Garden", 
+    location: "New York, NY", 
+    ticketLink: "https://ticketmaster.com/event1" 
+  },
+  { 
+    id: 2, 
+    title: "Acoustic Nights",
+    date: "2024-09-22", 
+    time: "19:30",
+    venue: "The Hollywood Bowl", 
+    location: "Los Angeles, CA", 
+    ticketLink: "https://ticketmaster.com/event2" 
+  },
+  { 
+    id: 3, 
+    title: "Mountain Melodies",
+    date: "2024-10-05", 
+    time: "18:00",
+    venue: "Red Rocks Amphitheatre", 
+    location: "Morrison, CO", 
+    ticketLink: "https://ticketmaster.com/event3" 
+  },
 ];
 
 const pastEvents = [
   { id: 1, date: "2023-12-31", venue: "Times Square", city: "New York, NY", image: "/images/past-event-1.jpg" },
   { id: 2, date: "2023-11-15", venue: "O2 Arena", city: "London, UK", image: "/images/past-event-2.jpg" },
   { id: 3, date: "2023-10-01", venue: "Sydney Opera House", city: "Sydney, Australia", image: "/images/past-event-3.jpg" },
-  // Add more past events as needed
 ];
 
 const EventsPage = () => {
@@ -26,31 +49,19 @@ const EventsPage = () => {
 
       <section className="mb-16">
         <h2 className="text-3xl font-semibold mb-6">Upcoming Performances</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="p-4 border-b">Date</th>
-                <th className="p-4 border-b">Venue</th>
-                <th className="p-4 border-b">City</th>
-                <th className="p-4 border-b">Tickets</th>
-              </tr>
-            </thead>
-            <tbody>
-              {upcomingEvents.map((event) => (
-                <tr key={event.id} className="hover:bg-gray-50">
-                  <td className="p-4 border-b">{new Date(event.date).toLocaleDateString()}</td>
-                  <td className="p-4 border-b">{event.venue}</td>
-                  <td className="p-4 border-b">{event.city}</td>
-                  <td className="p-4 border-b">
-                    <a href={event.ticketLink} target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
-                      Buy Tickets
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {upcomingEvents.map((event) => (
+            <EventCard
+              key={event.id}
+              id={event.id}
+              title={event.title}
+              date={event.date}
+              time={event.time}
+              venue={event.venue}
+              location={event.location}
+              ticketLink={event.ticketLink}
+            />
+          ))}
         </div>
       </section>
 

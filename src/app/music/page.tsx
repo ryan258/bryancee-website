@@ -1,15 +1,33 @@
 // src/app/music/page.tsx
 
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import AlbumCard from '@/components/AlbumCard';
 // import MusicPlayer from '@/components/MusicPlayer';
 
 // Mock data - replace with actual data from your backend or CMS
 const albums = [
-  { id: 1, title: "Echoes of Yesterday", year: 2020, cover: "/images/album-covers/echoes-of-yesterday.jpg", tracks: ["Track 1", "Track 2", "Track 3"] },
-  { id: 2, title: "Solitude's Embrace", year: 2018, cover: "/images/album-covers/solitudes-embrace.jpg", tracks: ["Track 1", "Track 2", "Track 3"] },
-  { id: 3, title: "Whispers in the Wind", year: 2015, cover: "/images/album-covers/whispers-in-the-wind.jpg", tracks: ["Track 1", "Track 2", "Track 3"] },
+  { 
+    id: 1, 
+    title: "Echoes of Yesterday", 
+    coverImage: "/images/album-covers/echoes-of-yesterday.jpg", 
+    releaseDate: "2020-05-15", 
+    tracks: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+  },
+  { 
+    id: 2, 
+    title: "Solitude's Embrace", 
+    coverImage: "/images/album-covers/solitudes-embrace.jpg", 
+    releaseDate: "2018-11-20", 
+    tracks: ["Track 1", "Track 2", "Track 3", "Track 4"]
+  },
+  { 
+    id: 3, 
+    title: "Whispers in the Wind", 
+    coverImage: "/images/album-covers/whispers-in-the-wind.jpg", 
+    releaseDate: "2015-03-10", 
+    tracks: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5", "Track 6"]
+  },
 ];
 
 const featuredTracks = [
@@ -27,6 +45,7 @@ const MusicPage = () => {
         <h2 className="text-2xl font-semibold mb-4">Featured Tracks</h2>
         <div className="bg-gray-100 p-6 rounded-lg">
           {/* <MusicPlayer tracks={featuredTracks} /> */}
+          <p className="text-gray-600">Music player component to be implemented</p>
         </div>
       </section>
 
@@ -34,25 +53,14 @@ const MusicPage = () => {
         <h2 className="text-2xl font-semibold mb-4">Albums</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {albums.map((album) => (
-            <div key={album.id} className="bg-white p-6 rounded-lg shadow-md">
-              <Image
-                src={album.cover}
-                alt={`${album.title} album cover`}
-                width={300}
-                height={300}
-                className="w-full h-auto mb-4 rounded"
-              />
-              <h3 className="text-xl font-semibold mb-2">{album.title}</h3>
-              <p className="text-gray-600 mb-4">Released: {album.year}</p>
-              <ul className="list-disc pl-5 mb-4">
-                {album.tracks.map((track, index) => (
-                  <li key={index}>{track}</li>
-                ))}
-              </ul>
-              <Link href={`/music/albums/${album.id}`} className="text-blue-600 hover:underline">
-                View Album Details
-              </Link>
-            </div>
+            <AlbumCard
+              key={album.id}
+              id={album.id}
+              title={album.title}
+              coverImage={album.coverImage}
+              releaseDate={album.releaseDate}
+              tracks={album.tracks}
+            />
           ))}
         </div>
       </section>
