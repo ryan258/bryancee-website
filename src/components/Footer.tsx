@@ -1,9 +1,15 @@
+// src/components/Footer.tsx
 
+import React from 'react';
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <div className="flex flex-col">
-      <h1>Footer</h1>
-    </div>
-  )
-}
+    <footer>
+      {/* TODO: Add copyright information */}
+      {/* TODO: Add social media links */}
+      {/* TODO: Add newsletter signup */}
+    </footer>
+  );
+};
+
+export default Footer;

@@ -1,33 +1,39 @@
+/* src/app/globals.css */
+
+/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* Custom global styles */
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  h1 {
+    @apply text-4xl font-bold mb-4;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold mb-3;
+  }
+
+  h3 {
+    @apply text-2xl font-medium mb-2;
+  }
+
+  a {
+    @apply text-blue-600 hover:text-blue-800;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
+/* Custom utility classes */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .content-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
+
+/* Any other global styles */
+/* TODO: Add custom styles for music player, album cards, etc. */
