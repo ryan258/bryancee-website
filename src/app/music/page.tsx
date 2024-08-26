@@ -1,39 +1,58 @@
-// src/app/music/page.tsx
-
 import React from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import AlbumCard from '@/components/AlbumCard';
-// import MusicPlayer from '@/components/MusicPlayer';
 
-// Mock data - replace with actual data from your backend or CMS
+const MusicPlayer = dynamic(() => import('@/components/MusicPlayer'), {
+  ssr: false,
+});
+
 const albums = [
   { 
     id: 1, 
-    title: "Echoes of Yesterday", 
-    coverImage: "/images/album-covers/echoes-of-yesterday.jpg", 
+    title: "Echoes of Banana", 
+    coverImage: "/images/album-covers/bb.jpeg", 
     releaseDate: "2020-05-15", 
-    tracks: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5"]
+    tracks: ["Banana Boom", "Tropical Nights", "Fruity Melody", "Peeling Away", "Yellow Sunset"]
   },
   { 
     id: 2, 
-    title: "Solitude's Embrace", 
-    coverImage: "/images/album-covers/solitudes-embrace.jpg", 
+    title: "Midnight Melodies", 
+    coverImage: "/images/album-covers/mm.jpeg", 
     releaseDate: "2018-11-20", 
-    tracks: ["Track 1", "Track 2", "Track 3", "Track 4"]
+    tracks: ["Midnight Melody", "Starry Skies", "Lullaby Lane", "Dreamer's Waltz"]
   },
   { 
     id: 3, 
-    title: "Whispers in the Wind", 
-    coverImage: "/images/album-covers/whispers-in-the-wind.jpg", 
+    title: "Solitude's Embrace", 
+    coverImage: "/images/album-covers/so.jpeg", 
     releaseDate: "2015-03-10", 
-    tracks: ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5", "Track 6"]
+    tracks: ["Solitude's Embrace", "Quiet Reflections", "Peaceful Path", "Inner Calm", "Tranquil Waters", "Serene Sunset"]
   },
 ];
 
 const featuredTracks = [
-  { id: 1, title: "Echoes of Yesterday", album: "Echoes of Yesterday", duration: "3:45" },
-  { id: 2, title: "Solitude's Embrace", album: "Solitude's Embrace", duration: "4:12" },
-  { id: 3, title: "Whispers in the Wind", album: "Whispers in the Wind", duration: "3:58" },
+  { 
+    id: 1, 
+    title: "Banana Boom", 
+    artist: "Bryan Cee",
+    album: "Echoes of Banana", 
+    audioSrc: "/audio/bb.mp3"
+  },
+  { 
+    id: 2, 
+    title: "Midnight Melodies", 
+    artist: "Bryan Cee",
+    album: "Midnight Melodies", 
+    audioSrc: "/audio/mm.mp3"
+  },
+  { 
+    id: 3, 
+    title: "Solitude's Embrace", 
+    artist: "Bryan Cee",
+    album: "Solitude's Embrace", 
+    audioSrc: "/audio/so.mp3"
+  },
 ];
 
 const MusicPage = () => {
@@ -44,8 +63,7 @@ const MusicPage = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Featured Tracks</h2>
         <div className="bg-gray-100 p-6 rounded-lg">
-          {/* <MusicPlayer tracks={featuredTracks} /> */}
-          <p className="text-gray-600">Music player component to be implemented</p>
+          <MusicPlayer tracks={featuredTracks} />
         </div>
       </section>
 

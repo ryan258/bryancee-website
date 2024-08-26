@@ -15,13 +15,14 @@ interface AlbumCardProps {
 const AlbumCard: React.FC<AlbumCardProps> = ({ id, title, coverImage, releaseDate, tracks }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
-      <div className="relative h-64 w-full">
+      <div className="relative aspect-square">
         <Image
           src={coverImage}
           alt={`${title} album cover`}
-          layout="fill"
-          objectFit="cover"
-          className="transition-opacity duration-300 hover:opacity-75"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover transition-opacity duration-300 hover:opacity-75"
+          priority={id === 1}
         />
       </div>
       <div className="p-4">

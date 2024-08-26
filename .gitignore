@@ -2,3 +2,5 @@ node_modules
 .next
 .env
 .env.local
+public/audio/*
+public/images/album-covers/*
