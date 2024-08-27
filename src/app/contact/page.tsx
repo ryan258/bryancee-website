@@ -11,7 +11,7 @@ const ContactPage: React.FC = () => {
       
       <section className="mb-12">
         <p className="text-xl mb-6">
-          Dear friends on this journey of conscious encouragement, I'm thrilled that you're reaching out to connect. Whether you're looking to share your story, explore collaboration opportunities, or simply say hello, your message is a cherished note in our collective symphony of positive change.
+          Dear friends on this journey of conscious encouragement, I&apos;m thrilled that you&apos;re reaching out to connect. Whether you&apos;re looking to share your story, explore collaboration opportunities, or simply say hello, your message is a cherished note in our collective symphony of positive change.
         </p>
         <p className="text-xl mb-6">
           Every connection we make is an opportunity to spread more light and harmony in the world. I look forward to hearing from you and exploring how we can create beautiful music together — both literally and figuratively!
@@ -25,7 +25,7 @@ const ContactPage: React.FC = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Let's Connect</h2>
+          <h2 className="text-2xl font-semibold mb-4">Let&apos;s Connect</h2>
           <div className="mb-6">
             <h3 className="text-xl font-medium mb-2">For Booking Inquiries:</h3>
             <p className="mb-1">Email: booking@bryancee.com</p>
@@ -50,10 +50,10 @@ const ContactPage: React.FC = () => {
       <section className="mt-12 bg-gray-100 p-6 rounded-lg">
         <h2 className="text-2xl font-semibold mb-4">A Note on Our Shared Journey</h2>
         <p className="mb-4">
-          Every message, every connection we make, is a step towards a more harmonious world. Your thoughts, ideas, and energy are invaluable contributions to this movement of conscious encouragement we're building together.
+          Every message, every connection we make, is a step towards a more harmonious world. Your thoughts, ideas, and energy are invaluable contributions to this movement of conscious encouragement we&apos;re building together.
         </p>
         <p>
-          While I may not be able to respond to every message personally, please know that each one is read and deeply appreciated. Your words fuel the melodies of change we're creating, and I'm grateful for your presence on this journey.
+          While I may not be able to respond to every message personally, please know that each one is read and deeply appreciated. Your words fuel the melodies of change we&apos;re creating, and I&apos;m grateful for your presence on this journey.
         </p>
       </section>
     </div>
