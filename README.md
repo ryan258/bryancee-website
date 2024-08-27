@@ -1,45 +1,53 @@
 # Bryan Cee Official Website
 
+![Bryan Cee Logo](https://ryan258.github.io/bryancee-website/images/bryan-cee-logo.png)
+
 This repository contains the official website for Bryan Cee, an international singer, songwriter, musician, composer, and educator. The site serves as an electronic press kit (EPK) to showcase Bryan's music, market his albums, and facilitate bookings for live performances.
 
-## Features
+## 🌐 Live Site
+
+Visit the live site: [https://ryan258.github.io/bryancee-website/](https://ryan258.github.io/bryancee-website/)
+
+## ✨ Features
 
 - Responsive design for all devices
-- Interactive music player with custom controls
-- Dynamic album and track displays
-- Photo gallery for album covers
-- Event calendar and booking system (to be implemented)
-- Contact form (to be implemented)
+- Interactive music player with playlist functionality
+- Video integration for music videos and live performances
+- Dynamic photo gallery
+- Event calendar and booking system
+- Contact form for inquiries and bookings
 - Social media integration
-- Newsletter signup (to be implemented)
+- Newsletter signup for fan engagement
 
-## Technology Stack
+## 🛠 Technology Stack
 
-- Next.js 14.2.6+ with App Router
-- React 18
-- TypeScript
-- Tailwind CSS
-- Headless UI and Heroicons
+- [Next.js](https://nextjs.org/) 14+ with App Router
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Headless UI](https://headlessui.dev/) for accessible UI components
+- [Heroicons](https://heroicons.com/) for icons
 
-## Prerequisites
+## 📋 Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
 - Node.js (v14.0.0 or later)
 - npm (v6.0.0 or later)
+- Git
 
-## Getting Started
+## 🚀 Getting Started
 
 To get a local copy up and running, follow these simple steps:
 
 1. Clone the repository
    ```
-   git clone https://github.com/your-username/bryan-cee-website.git
+   git clone https://github.com/ryan258/bryancee-website.git
    ```
 
 2. Navigate to the project directory
    ```
-   cd bryan-cee-website
+   cd bryancee-website
    ```
 
 3. Install dependencies
@@ -47,68 +55,65 @@ To get a local copy up and running, follow these simple steps:
    npm install
    ```
 
-4. Start the development server
+4. Create a `.env.local` file in the root directory and add any necessary environment variables (refer to `.env.example` if provided)
+
+5. Start the development server
    ```
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Project Structure
+## 📂 Project Structure
 
 ```
-bryan-cee-website/
+bryancee-website/
+├── public/
+│   ├── images/
+│   └── audio/
 ├── src/
 │   ├── app/
-│   │   ├── music/
-│   │   │   └── page.tsx
 │   │   ├── about/
-│   │   │   └── page.tsx
-│   │   ├── contact/
-│   │   │   └── page.tsx
+│   │   ├── music/
+│   │   ├── services/
+│   │   ├── media/
 │   │   ├── events/
-│   │   │   └── page.tsx
+│   │   ├── contact/
 │   │   ├── layout.tsx
 │   │   └── page.tsx
 │   ├── components/
-│   │   ├── MusicPlayer.tsx
-│   │   ├── AlbumCard.tsx
 │   │   ├── Header.tsx
-│   │   └── Footer.tsx
-│   └── styles/
-│       └── globals.css
-├── public/
-│   ├── audio/
-│   └── images/
-│       └── album-covers/
+│   │   ├── Footer.tsx
+│   │   ├── MusicPlayer.tsx
+│   │   └── ...
+│   └── lib/
+├── styles/
+│   └── globals.css
 ├── next.config.js
 ├── tailwind.config.js
 ├── tsconfig.json
-├── package.json
-└── README.md
+└── package.json
 ```
 
-## Current Status
+## 🔧 Available Scripts
 
-- Implemented responsive layout with Next.js and Tailwind CSS
-- Created custom MusicPlayer component with play/pause, next, and previous track functionality
-- Developed AlbumCard component for displaying album information
-- Integrated dynamic audio playback with automatic duration detection
-- Set up basic routing for main pages (Home, Music, About, Contact, Events)
+In the project directory, you can run:
 
-## Next Steps
+- `npm run dev`: Runs the app in development mode
+- `npm run build`: Builds the app for production
+- `npm start`: Runs the built app in production mode
+- `npm run lint`: Lints the codebase using ESLint
+- `npm run type-check`: Checks for TypeScript errors
 
-1. Implement the Events page with calendar and booking functionality
-2. Create a Contact form and integrate with a backend service
-3. Develop a Newsletter signup component and integrate with a mailing service
-4. Enhance the About page with Bryan's biography and achievements
-5. Implement server-side rendering for improved SEO
-6. Add animations and transitions for a more engaging user experience
-7. Integrate with a CMS for easy content management
-8. Implement unit and integration tests
-9. Set up CI/CD pipeline for automated deployments
+## 🚢 Deployment
 
-## Contributing
+This project is set up to deploy to GitHub Pages using GitHub Actions. To deploy:
+
+1. Push your changes to the `main` branch
+2. The GitHub Actions workflow will automatically build and deploy the site to the `gh-pages` branch
+3. Your changes will be live at [https://ryan258.github.io/bryancee-website/](https://ryan258.github.io/bryancee-website/)
+
+## 🤝 Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -118,21 +123,32 @@ Contributions are what make the open-source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
+Please make sure to update tests as appropriate and adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+
+## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## Contact
+## 📞 Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter)
+Ryan Foy - [@ryan258](https://github.com/ryan258)
 
-Project Link: [https://github.com/your-username/bryan-cee-website](https://github.com/your-username/bryan-cee-website)
+Project Link: [https://github.com/ryan258/bryancee-website](https://github.com/ryan258/bryancee-website)
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Headless UI](https://headlessui.dev/)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://reactjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Headless UI Documentation](https://headlessui.dev/)
 - [Heroicons](https://heroicons.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [GitHub Actions](https://github.com/features/actions)
+
+## 📊 Project Status
+
+This project is actively under development. Check the [Issues](https://github.com/ryan258/bryancee-website/issues) page for current tasks and bugs, or the [Projects](https://github.com/ryan258/bryancee-website/projects) page for the development roadmap.
+
+---
+
+⭐️ If you find this project useful, please consider giving it a star on GitHub! ⭐️
