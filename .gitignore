@@ -1,6 +1,12 @@
+# Existing entries
 node_modules
 .next
 .env
 .env.local
+
+# Remove or comment out the following line if it exists
+# out
+
+# Keep these lines
 public/audio/*
 public/images/album-covers/*
