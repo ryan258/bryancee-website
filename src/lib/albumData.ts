@@ -1,8 +1,8 @@
-// src/lib/api.ts
+// src/lib/albumData.ts
 
-import { Album, Track } from '@/types';
+import { Album } from '@/types';
 
-const albums: Album[] = [
+export const albums: Album[] = [
   {
     id: '1',
     title: "Blue Bird Delux",
@@ -62,20 +62,12 @@ Painting freedom across the sky`
   // Add more albums here, following the same structure
 ];
 
-export async function getAlbumById(id: string): Promise<Album | null> {
-  // Simulating an API call
-  await new Promise(resolve => setTimeout(resolve, 100));
+export const getAlbumById = (id: string): Album | undefined => {
+  return albums.find(album => album.id === id);
+};
 
-  return albums.find(album => album.id === id) || null;
-}
-
-export function getAllAlbums(): Album[] {
-  // This would typically fetch from an API, but we'll use the mock data for now
-  return albums;
-}
-
-export function getLatestAlbum(): Album {
+export const getLatestAlbum = (): Album => {
   return albums.reduce((latest, current) => {
     return new Date(current.releaseDate) > new Date(latest.releaseDate) ? current : latest;
   });
-}
+};

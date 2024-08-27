@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { PlayIcon, PauseIcon, ForwardIcon, BackwardIcon } from '@heroicons/react/24/solid';
 
 interface Track {
-  id: number;
+  id: number | string;
   title: string;
   artist: string;
   album: string;
