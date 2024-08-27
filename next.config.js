@@ -20,6 +20,7 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+    basePath: '/bryancee-website',
   }
   
   module.exports = nextConfig
