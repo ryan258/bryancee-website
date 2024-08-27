@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fmusic\u002Falbums\u002F[id]","\u002Fmusic\u002Ftracks\u002F[id]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
